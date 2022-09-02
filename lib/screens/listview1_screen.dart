@@ -12,11 +12,13 @@ class ListView1Screen extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          ...options.map((e) => Text('hola mundo')).toList()
-
-          // ListTile(
-          //   title: Text('Hola Mundo'),
-          // ),
+          //...options.map((e) => Text('hola mundo')).toList()
+          ...options.map(
+            (game) => ListTile(
+              title: Text(game),
+              trailing: const Icon(Icons.arrow_forward_ios_outlined),
+            ),
+          )
         ],
       ),
     );
